@@ -3,50 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Styled Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            background: #ffffff;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"] {
+            margin-right: 6px;
+        }
+
+        p {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .radio-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-<a href="https://cpf.jo/"><center><img src="./cpf.webp" alt=""></a></center>
-     
-<center><form>
-<label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="fname">National ID number:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for=""></label>
-  
-  <p> ما هي اصعب لغه ؟*</p>
-  <form>
-  <input type="radio" id="html" name="fav_language" value="HTML">
-  <label for="html">HTML</label><br>
-  <input type="radio" id="css" name="fav_language" value="CSS">
-  <label for="css">CSS</label><br>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-<label for="javascript">JavaScript</label>
-<p></p>
-<label for="text">من اي محافظه؟ *</label><br>
-<input type="text">
-<p></p>
-<p>ما هو مستواك التعليمي؟*</p>
-<form>
-  <input type="radio" id="html" name="fav_language" value="HTML">
-  <label for="html">دبلوم</label><br>
-  <input type="radio" id="css" name="fav_language" value="CSS">
-  <label for="css"> الباكلوريوس</label><br>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-<label for="javascript">توجيهي </label></center>
-<p></p>
-<center><input type="submit" value="Submit"></center>
 
+<div class="container">
+    <div class="center">
+        <a href="https://cpf.jo/">
+            <img src="./cpf.webp" alt="CPF">
+        </a>
+    </div>
 
+    <form>
+        <label>First name:</label>
+        <input type="text">
 
-</form>
+        <label>Last name:</label>
+        <input type="text">
+
+        <label>National ID number:</label>
+        <input type="text">
+
+        <p>ما هي اصعب لغه؟ *</p>
+        <div class="radio-group">
+            <input type="radio" name="lang"> HTML<br>
+            <input type="radio" name="lang"> CSS<br>
+            <input type="radio" name="lang"> JavaScript
+        </div>
+
+        <label>من اي محافظه؟ *</label>
+        <input type="text">
+
+        <p>ما هو مستواك التعليمي؟ *</p>
+        <div class="radio-group">
+            <input type="radio" name="edu"> دبلوم<br>
+            <input type="radio" name="edu"> البكالوريوس<br>
+            <input type="radio" name="edu"> توجيهي
+        </div>
+
+        <div class="center">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
 </body>
-
-
-
-
-
 </html>
